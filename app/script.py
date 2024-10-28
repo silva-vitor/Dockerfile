@@ -1,0 +1,1 @@
+print("criação de imagem")
