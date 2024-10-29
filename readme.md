@@ -4,19 +4,21 @@ cd  <nome do projeto>   **entra no projeto**
 npm init -y **Estalão do pacote node.js**
 npm install express **estalação da estenção para criar rotas**
 
- ** Cria uma pasta coloque depois coloca os arquivo Dockerfile e o scriot.pt 
- 
+ ** Cria um arquivo Dockerfile 
+
 ** dentro do Dockrfile coloque  
- FROM python:3  **(Apartir de onde começa)**
+ FROM node   **(Define a imagem base como Node.js)**
 
-WORKDIR /app   **( Definir a pasta de trabalho )**
+WORKDIR /app   **( Define o diretório de trabalho dentro do container )**
 
-COPY script.py ./  **( Para copiar da pasta de origem para a de destino )**
-**
-CMD ["python", "app/script.py"]  **( Comando para esescutar um arquivo )**
+RUN npm install **(Esta as dependencia na aria de trabalho)**
+
+COPY package*.json ./  **( Para copiar da pasta de origem para a de destino )**
+
+CMD ["node", "index.js"] **( Define o campo a ser executado  )**
 
 
-** dento do script  coloque o comando  print("criar imagem ")
+
 
 **Construção da imagem**
 

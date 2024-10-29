@@ -1,1 +1,0 @@
-print("criação de imagem")
