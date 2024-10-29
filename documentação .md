@@ -24,6 +24,6 @@ CMD ["node", "index.js"] **( Define o campo a ser executado  )**
 
 docker build -t <nome da imagem> **Para criar**
 
-docker run -p 8080:3000 <nome da imagem> **busca a imagem**
+docker run -d -p 8080:3000 nome-da-imagem **busca a imagem**
 
 
