@@ -1,4 +1,4 @@
-FROM node 
+FROM node
 
 WORKDIR /app
 
@@ -8,4 +8,6 @@ RUN npm install
 
 COPY . .
 
-CMD ["node", "index.js"]
+EXPOSE 3000
+
+CMD ["node", "server.mjs"]
